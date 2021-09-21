@@ -1,0 +1,77 @@
+addEventListener("fetch", event => {
+  const data = {
+    name: "tamivoo",
+    short_name: "tamivoo",
+    display: "standalone",
+    prefer_related_applications: false,
+    start_url: ".",
+    scope: "\/",
+    background_color: "#fff",
+    theme_color: "#01579b",
+    description: "tamivoo multishare multi link multi source.",
+    icons:[
+      {
+      src: "https://1.bp.blogspot.com/-2MLtOVNEJIw/YUpZ0mD3ujI/AAAAAAAAFyw/3n-SdSFAC5UtTod2C_4EFmI6S_dpzLILwCLcBGAsYHQ/s0/36.png",
+      sizes: "36x36",
+      type: "image\/png",
+      density: "0.75",
+      purpose: "any maskable"
+      },
+      {
+      src: "https://1.bp.blogspot.com/-wtVCrjiqGFA/YUpI5erhokI/AAAAAAAAFyA/8BX7xr1_xDch3CbPTlhUmkKZH9MeBQ7zwCLcBGAsYHQ/s0/maskable_icon_x48.png",
+      sizes: "48x48",
+      type: "image\/png",
+      density: "1.0",
+      purpose: "any maskable"
+      },
+      {
+      src: "https://1.bp.blogspot.com/-9p43QfHHD6c/YUpI6E4gSzI/AAAAAAAAFyM/ywGUCeOqwHEqjChdwl_USktRSFjXRy20wCLcBGAsYHQ/s0/maskable_icon_x72.png",
+      sizes: "72x72",
+      type: "image\/png",
+      density: "1.5",
+      purpose: "any maskable"
+      },
+      {
+      src: "https://1.bp.blogspot.com/-kvlHlD5Gf1A/YUpI6IpCzFI/AAAAAAAAFyQ/lY9nXEWk0rsj5CFYnhO5HB_pk0ThqFTSwCLcBGAsYHQ/s0/maskable_icon_x96.png",
+      sizes: "96x96",
+      type: "image\/png",
+      density: "2.0",
+      purpose: "any maskable"
+      },
+      {
+      src: "https://1.bp.blogspot.com/-mB0FTPpd7Nc/YUpaf2bYSXI/AAAAAAAAFy8/88-EiTV9fxA731Os_iVsdXWwcxEsP9dcwCLcBGAsYHQ/s0/144.png",
+      sizes: "144x144",
+      type: "image\/png",
+      density: "3.0",
+      purpose: "any maskable"
+      },
+      {
+      src: "https://1.bp.blogspot.com/-xThgVt4mO2I/YUpI4eh79RI/AAAAAAAAFx4/uHGyXqy6SqYpOUCIoRynKqOOK768htNhACLcBGAsYHQ/s0/maskable_icon_x192.png",
+      sizes: "192x192",
+      type: "image\/png",
+      density: "4.0",
+      purpose: "any maskable"
+      },
+      {
+      src: "https://1.bp.blogspot.com/-1b8WtaFlHoc/YUpI5dWkG3I/AAAAAAAAFyI/LpfCyEDSKwILnfRqir-xgR8dDPB4SmZ0gCLcBGAsYHQ/s320/maskable_icon_x512.png",
+      sizes: "512x512",
+      type: "image/png",
+      density: "4.0",
+      purpose: "any maskable"
+      },
+    ],
+  "serviceworker": {
+    "src": "/sw.js"
+  }
+  }
+
+  const json = JSON.stringify(data, null, 2)
+
+  return event.respondWith(
+    new Response(json, {
+      headers: {
+        "content-type": "application/json;charset=UTF-8"
+      }
+    })
+  )
+})
